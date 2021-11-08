@@ -21,8 +21,16 @@ from django.urls import path
 # ]
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
 from lab1.views import index
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('lab1.urls'))
+    path('', include('lab1.urls')),
+    path('movies/', include('movies.urls'))
 ]
+
+if settings.DEBUG:
+
+    from django.conf.urls.static import static
+
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
