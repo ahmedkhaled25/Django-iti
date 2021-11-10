@@ -9,7 +9,20 @@
                 </div>
                 <div>{{movie.description}}</div>
                 <div>{{movie.likes}}</div>
-
+                <div>
+                    <ul>
+                    {% for cast in movie.casts.all %}
+                        <li>{{ cast.producer }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                 <div>
+                    <ul>
+                    {% for review in movie.review_set.all %}
+                        <li>{{ review.comment }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
             </div>
 
 

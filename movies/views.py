@@ -1,7 +1,8 @@
 from django.shortcuts import render,redirect
-from .models import Movie
+from .models import Movie, Cast, Category
 # from django.views.decorators.csrf import csrf_exempt
 from .forms import MovieForm
+
 
 # Create your views here.
 

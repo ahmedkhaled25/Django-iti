@@ -25,6 +25,7 @@ from django.conf import settings
 from lab1.views import index
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/', include('django.contrib.auth.urls')),
     path('', include('lab1.urls')),
     path('movies/', include('movies.urls'))
 ]

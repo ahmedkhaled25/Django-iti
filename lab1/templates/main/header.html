@@ -1,5 +1,16 @@
 <header>
 <nav class="navbar navbar-light" style="background-color: slategray">
     <h1 style="color: white">Moviera website</h1>
+
+        <div class="navbar-nav">
+
+            {% if user.is_authenticated %}
+            <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
+            {% else %}
+            <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
+            {% endif %}
+
+        </div>
+
 </nav><br/>
 </header>

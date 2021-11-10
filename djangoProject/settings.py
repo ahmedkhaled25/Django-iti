@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'lab1',
-    'movies',
+    'movies.apps.MoviesConfig',
 ]
 
 MIDDLEWARE = [
@@ -139,3 +139,14 @@ MEDIA_ROOT = 'c:/Users/ahmed/PycharmProjects/djangoProject/media_root'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'notifiersys@gmail.com'
+EMAIL_HOST_PASSWORD = 'xyz159753'
+
+LOGIN_URL='/accounts/login'
+LOGIN_REDIRECT_URL='/movies/index'
+LOGOUT_REDIRECT_URL='/movies/index'
+
